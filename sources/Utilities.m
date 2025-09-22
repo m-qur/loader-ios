@@ -1308,17 +1308,17 @@ static UIView   *islandOverlayView = nil;
     CGFloat yPosition   = window.safeAreaInsets.top;
 
     devBuildLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, height)];
-    devBuildLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
-    devBuildLabel.textColor       = [UIColor colorWithRed:1.0 green:0.2 blue:0.2 alpha:1.0];
+    devBuildLabel.backgroundColor = [UIColor clearColor];
+    devBuildLabel.textColor       = [UIColor clearColor];
     devBuildLabel.font            = [UIFont boldSystemFontOfSize:12.0];
     devBuildLabel.textAlignment   = NSTextAlignmentCenter;
-    devBuildLabel.text            = @"DEVELOPMENT BUILD - DO NOT USE";
-
-    devBuildLabel.layer.shadowColor   = [UIColor blackColor].CGColor;
-    devBuildLabel.layer.shadowOffset  = CGSizeMake(0.0, 1.0);
-    devBuildLabel.layer.shadowOpacity = 0.8;
-    devBuildLabel.layer.shadowRadius  = 1.0;
-
+    devBuildLabel.text            = @"";
+    
+    devBuildLabel.layer.shadowColor   = [UIColor clearColor].CGColor;
+    devBuildLabel.layer.shadowOffset  = CGSizeMake(0.0, 0.0);
+    devBuildLabel.layer.shadowOpacity = 0.0;
+    devBuildLabel.layer.shadowRadius  = 0.0;
+    
     [window addSubview:devBuildLabel];
     [window bringSubviewToFront:devBuildLabel];
 }
